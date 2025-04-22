@@ -1,0 +1,12 @@
+C:\repo\Sluis\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\repo\Sluis\Domain\bin\Debug\net8.0\Domain.dll
+C:\repo\Sluis\Domain\bin\Debug\net8.0\Domain.pdb
+C:\repo\Sluis\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+C:\repo\Sluis\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\Sluis\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\repo\Sluis\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\repo\Sluis\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\repo\Sluis\Domain\obj\Debug\net8.0\Domain.dll
+C:\repo\Sluis\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\repo\Sluis\Domain\obj\Debug\net8.0\Domain.pdb
+C:\repo\Sluis\Domain\obj\Debug\net8.0\ref\Domain.dll

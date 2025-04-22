@@ -1,0 +1,16 @@
+C:\repo\clean\Example\Domain\bin\Debug\net8.0\Example.Domain.deps.json
+C:\repo\clean\Example\Domain\bin\Debug\net8.0\Example.Domain.dll
+C:\repo\clean\Example\Domain\bin\Debug\net8.0\Example.Domain.pdb
+C:\repo\clean\Example\Domain\bin\Debug\net8.0\Clean.Core.dll
+C:\repo\clean\Example\Domain\bin\Debug\net8.0\Clean.Core.pdb
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example.Domain.csproj.AssemblyReference.cache
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example.Domain.AssemblyInfoInputs.cache
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example.Domain.AssemblyInfo.cs
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example.Domain.csproj.CoreCompileInputs.cache
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example.Domain.sourcelink.json
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example..C4808CED.Up2Date
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example.Domain.dll
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\refint\Example.Domain.dll
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\Example.Domain.pdb
+C:\repo\clean\Example\Domain\obj\Debug\net8.0\ref\Example.Domain.dll

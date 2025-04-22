@@ -1,0 +1,513 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\repo\\Sluis\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|c:\\repo\\sluis\\application\\extensions\\webapplicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|solutionrelative:application\\extensions\\webapplicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|c:\\repo\\sluis\\application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|solutionrelative:application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|c:\\repo\\sluis\\application\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|solutionrelative:application\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|c:\\repo\\sluis\\application\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|solutionrelative:application\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|c:\\repo\\sluis\\application\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|solutionrelative:application\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|c:\\repo\\sluis\\application\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|solutionrelative:application\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD426CC2-8748-2E67-F28F-0F1C9BE630D9}|Data\\Data.csproj|c:\\repo\\sluis\\data\\extensions\\servicecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD426CC2-8748-2E67-F28F-0F1C9BE630D9}|Data\\Data.csproj|solutionrelative:data\\extensions\\servicecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD426CC2-8748-2E67-F28F-0F1C9BE630D9}|Data\\Data.csproj|c:\\repo\\sluis\\data\\configurations\\foto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD426CC2-8748-2E67-F28F-0F1C9BE630D9}|Data\\Data.csproj|solutionrelative:data\\configurations\\foto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\entities\\foto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\foto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\fotomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\fotomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\update\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\update\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\update\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\update\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\update\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\update\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\get\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\get\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\get\\output.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\get\\output.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\get\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\get\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\getall\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\getall\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\getall\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\getall\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\delete\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\delete\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\delete\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\delete\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\create\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\create\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\create\\output.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\create\\output.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\create\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\create\\usecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\usecases\\foto\\create\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\usecases\\foto\\create\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\events\\foto\\created\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\events\\foto\\created\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD426CC2-8748-2E67-F28F-0F1C9BE630D9}|Data\\Data.csproj|c:\\repo\\sluis\\data\\sluisdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD426CC2-8748-2E67-F28F-0F1C9BE630D9}|Data\\Data.csproj|solutionrelative:data\\sluisdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|c:\\repo\\sluis\\domain\\extensions\\servicecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313DBBBF-8CD2-FFAD-7B5D-435FA76D5EDD}|Domain\\Domain.csproj|solutionrelative:domain\\extensions\\servicecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|c:\\repo\\sluis\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{08BB78A6-C93E-479E-BE7E-880230BB91E8}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Foto.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Data\\Configurations\\Foto.cs",
+              "RelativeDocumentMoniker": "Data\\Configurations\\Foto.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Data\\Configurations\\Foto.cs",
+              "RelativeToolTip": "Data\\Configurations\\Foto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:00:10.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Foto.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\Entities\\Foto.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Foto.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\Entities\\Foto.cs",
+              "RelativeToolTip": "Domain\\Entities\\Foto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:00:14.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Domain.csproj",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-22T20:34:02.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:53:03.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StringExtensions.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Application\\Extensions\\StringExtensions.cs",
+              "RelativeDocumentMoniker": "Application\\Extensions\\StringExtensions.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Application\\Extensions\\StringExtensions.cs",
+              "RelativeToolTip": "Application\\Extensions\\StringExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:29:50.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebApplicationExtensions.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Application\\Extensions\\WebApplicationExtensions.cs",
+              "RelativeDocumentMoniker": "Application\\Extensions\\WebApplicationExtensions.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Application\\Extensions\\WebApplicationExtensions.cs",
+              "RelativeToolTip": "Application\\Extensions\\WebApplicationExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:30:00.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceCollection.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Data\\Extensions\\ServiceCollection.cs",
+              "RelativeDocumentMoniker": "Data\\Extensions\\ServiceCollection.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Data\\Extensions\\ServiceCollection.cs",
+              "RelativeToolTip": "Data\\Extensions\\ServiceCollection.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:42:15.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppConfiguration.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Application\\AppConfiguration.cs",
+              "RelativeDocumentMoniker": "Application\\AppConfiguration.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Application\\AppConfiguration.cs",
+              "RelativeToolTip": "Application\\AppConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:27:12.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Application\\appsettings.json",
+              "RelativeDocumentMoniker": "Application\\appsettings.json",
+              "ToolTip": "C:\\repo\\Sluis\\Application\\appsettings.json",
+              "RelativeToolTip": "Application\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-22T20:10:41.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Application\\Program.cs",
+              "RelativeDocumentMoniker": "Application\\Program.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Application\\Program.cs",
+              "RelativeToolTip": "Application\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:12:44.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FotoModel.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\FotoModel.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\FotoModel.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\FotoModel.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\FotoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:05:19.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Validator.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Update\\Validator.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Update\\Validator.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Update\\Validator.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Update\\Validator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:15:30.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Input.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Update\\Input.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Update\\Input.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Update\\Input.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Update\\Input.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:13:47.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UseCase.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Update\\UseCase.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Update\\UseCase.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Update\\UseCase.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Update\\UseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:14:38.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UseCase.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Get\\UseCase.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Get\\UseCase.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Get\\UseCase.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Get\\UseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:10:35.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Output.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Get\\Output.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Get\\Output.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Get\\Output.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Get\\Output.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:10:06.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Input.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Get\\Input.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Get\\Input.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Get\\Input.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Get\\Input.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:09:48.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Input.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\GetAll\\Input.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\GetAll\\Input.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\GetAll\\Input.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\GetAll\\Input.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:11:05.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UseCase.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\GetAll\\UseCase.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\GetAll\\UseCase.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\GetAll\\UseCase.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\GetAll\\UseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:11:46.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UseCase.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Delete\\UseCase.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Delete\\UseCase.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Delete\\UseCase.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Delete\\UseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:09:20.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Input.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Delete\\Input.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Delete\\Input.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Delete\\Input.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Delete\\Input.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:09:04.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Validator.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Create\\Validator.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Create\\Validator.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Create\\Validator.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Create\\Validator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:08:06.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Output.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Create\\Output.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Create\\Output.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Create\\Output.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Create\\Output.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:05:01.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UseCase.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Create\\UseCase.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Create\\UseCase.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Create\\UseCase.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Create\\UseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:07:05.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Input.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Create\\Input.cs",
+              "RelativeDocumentMoniker": "Domain\\UseCases\\Foto\\Create\\Input.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\UseCases\\Foto\\Create\\Input.cs",
+              "RelativeToolTip": "Domain\\UseCases\\Foto\\Create\\Input.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:04:39.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "EventHandler.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\Events\\Foto\\Created\\EventHandler.cs",
+              "RelativeDocumentMoniker": "Domain\\Events\\Foto\\Created\\EventHandler.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\Events\\Foto\\Created\\EventHandler.cs",
+              "RelativeToolTip": "Domain\\Events\\Foto\\Created\\EventHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T21:02:35.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ServiceCollection.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Domain\\Extensions\\ServiceCollection.cs",
+              "RelativeDocumentMoniker": "Domain\\Extensions\\ServiceCollection.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Domain\\Extensions\\ServiceCollection.cs",
+              "RelativeToolTip": "Domain\\Extensions\\ServiceCollection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:44:00.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SluisDbContext.cs",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Data\\SluisDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\SluisDbContext.cs",
+              "ToolTip": "C:\\repo\\Sluis\\Data\\SluisDbContext.cs",
+              "RelativeToolTip": "Data\\SluisDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T20:13:38.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Application.csproj",
+              "DocumentMoniker": "C:\\repo\\Sluis\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "Application\\Application.csproj",
+              "ToolTip": "C:\\repo\\Sluis\\Application\\Application.csproj",
+              "RelativeToolTip": "Application\\Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-22T20:09:19.79Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
