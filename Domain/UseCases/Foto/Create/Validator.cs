@@ -7,5 +7,7 @@ internal sealed class CreateFotoInputValidator : AbstractValidator<CreateFotoInp
     public CreateFotoInputValidator()
     {
         RuleFor(input => input.Name).NotEmpty();
+
+        RuleFor(input => input.AlbumId).NotEmpty();
     }
 }

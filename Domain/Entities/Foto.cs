@@ -14,6 +14,7 @@ internal class Foto : Entity
     public Foto(CreateFotoInput input)
     {
         Name = input.Name;
+        AlbumId = input.AlbumId;
 
         events.Add(new FotoCreatedEvent(this));
     }
