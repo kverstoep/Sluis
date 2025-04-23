@@ -2,7 +2,7 @@
 
 namespace Domain;
 
-internal sealed class GetAllExampleUseCase(IEntityGateway<Foto> gateway) : IUseCase<GetAllFotosInput>
+internal sealed class GetAllFotosUseCase(IEntityGateway<Foto> gateway) : IUseCase<GetAllFotosInput>
 {
     public async Task<IOutput> ExecuteAsync(GetAllFotosInput input) =>
         new GetAllFotosOutput(await gateway.GetAllAsync());

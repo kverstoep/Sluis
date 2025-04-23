@@ -2,7 +2,7 @@
 
 namespace Domain;
 
-internal sealed class UpdateExampleUseCase(IEntityGateway<Foto> gateway) : IUseCase<UpdateFotoInput>
+internal sealed class UpdateFotoUseCase(IEntityGateway<Foto> gateway) : IUseCase<UpdateFotoInput>
 {
     public async Task<IOutput> ExecuteAsync(UpdateFotoInput input)
     {

@@ -6,6 +6,9 @@ internal class Foto : Entity
 {
     public string Name { get; private set; }
 
+    public Guid AlbumId { get; set; }
+    public virtual Album Album { get; set; }
+
     protected Foto() { }
 
     public Foto(CreateFotoInput input)

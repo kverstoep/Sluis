@@ -2,16 +2,16 @@
 
 namespace Domain;
 
-internal sealed class CreateExampleUseCase(IEntityGateway<Foto> gateway) : IUseCase<CreateFotoInput>
+internal sealed class CreateFotoUseCase(IEntityGateway<Foto> gateway) : IUseCase<CreateFotoInput>
 {
     public async Task<IOutput> ExecuteAsync(CreateFotoInput input)
     {
-        var example = new Foto(input);
+        var foto = new Foto(input);
 
         await gateway
-            .Add(example)
+            .Add(foto)
             .SaveChangesAsync();
 
-        return new CreateFotoOutput(example);
+        return new CreateFotoOutput(foto);
     }
 }

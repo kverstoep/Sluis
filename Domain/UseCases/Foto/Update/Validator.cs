@@ -2,9 +2,9 @@
 
 namespace Domain;
 
-internal sealed class UpdateExampleInputValidator : AbstractValidator<UpdateFotoInput>
+internal sealed class UpdateFotoInputValidator : AbstractValidator<UpdateFotoInput>
 {
-    public UpdateExampleInputValidator()
+    public UpdateFotoInputValidator()
     {
         RuleFor(input => input.Name).NotEmpty();
     }

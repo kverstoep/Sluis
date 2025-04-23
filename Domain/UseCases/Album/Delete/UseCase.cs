@@ -2,9 +2,9 @@
 
 namespace Domain;
 
-internal sealed class DeleteFotoUseCase(IEntityGateway<Foto> gateway) : IUseCase<DeleteFotoInput>
+internal sealed class DeleteAlbumUseCase(IEntityGateway<Album> gateway) : IUseCase<DeleteAlbumInput>
 {
-    public async Task<IOutput> ExecuteAsync(DeleteFotoInput input)
+    public async Task<IOutput> ExecuteAsync(DeleteAlbumInput input)
     {
         await gateway
             .Delete(input.Id)

@@ -11,5 +11,11 @@ internal sealed class FotoEntityTypeConfiguration : IEntityTypeConfiguration<Fot
         builder
             .Property(foto => foto.Id)
             .ValueGeneratedOnAdd();
+
+        builder
+            .HasOne(b => b.Album)
+            .WithMany(a => a.Fotos)
+            .HasForeignKey(b => b.AlbumId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
