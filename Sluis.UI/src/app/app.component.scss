@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.content-container {
+    display: flex;
+    flex: 1;
+
+    .router {
+        flex: 2;
+    }
+
+    .news {
+        flex: 1;
+    }
+}

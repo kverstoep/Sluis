@@ -1,0 +1,34 @@
+<mat-toolbar style="height: 64px;">
+    <a [routerLink]="['/']">
+        <img src="img/speeltuin_de_sluis.png" alt="Speeltuin de Sluis" width="200" height="auto">
+    </a>
+
+    <button mat-button *ngIf="!smallScreen">Ontdek de speeltuin</button>
+
+    <button mat-button *ngIf="!smallScreen" [matMenuTriggerFor]="planBezoek">Plan je bezoek</button>
+    <mat-menu #planBezoek="matMenu">
+        <button mat-menu-item>Entree prijzen</button>
+        <button mat-menu-item>Openingstijden</button>
+        <button mat-menu-item>Abonnement</button>
+        <button mat-menu-item>Huisregels</button>
+        <button mat-menu-item>Route</button>
+    </mat-menu>
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button [routerLink]="['/admin']">
+        <mat-icon>settings</mat-icon>
+    </button>
+
+    <button mat-icon-button *ngIf="smallScreen">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+
+<div class="content-container">
+    <div class="router">
+        <router-outlet></router-outlet>
+    </div>
+
+    <news-component class="news" *ngIf="!hideNews && !smallScreen"></news-component>
+</div>
