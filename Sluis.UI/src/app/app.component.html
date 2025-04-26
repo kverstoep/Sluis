@@ -29,7 +29,8 @@
             </a>
 
             @for (route of routes; track $index) {
-            <button mat-button *ngIf="!smallScreen && !route.subNavigationPaths" routerLink="/{{route.routeLink}}">
+            <button mat-button *ngIf="!smallScreen && !route.subNavigationPaths && !route.hideInToolbar"
+                routerLink="/{{route.routeLink}}">
                 {{route.name}}
             </button>
 

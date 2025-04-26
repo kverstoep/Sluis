@@ -1,6 +1,7 @@
 export interface INavigationPath {
     name: string;
-    routeLink: string;
+    hideInToolbar?: boolean;
+    routeLink?: string;
     subNavigationPaths?: INavigationPath[];
 }
 
@@ -8,6 +9,7 @@ export class NavigationPaths {
     static paths: INavigationPath[] = [
         {
             name: 'Home',
+            hideInToolbar: true,
             routeLink: ''
         },
         {
@@ -16,7 +18,6 @@ export class NavigationPaths {
         },
         {
             name: 'Plan je bezoek',
-            routeLink: 'plan-je-bezoek',
             subNavigationPaths: [
                 {
                     name: 'Entree prijzen',
@@ -39,6 +40,38 @@ export class NavigationPaths {
                     routeLink: 'route'
                 }
             ]
-        }
+        },
+        {
+            name: 'Over de Sluis',
+            subNavigationPaths: [
+                {
+                    name: 'Bestuur & vrijwilligers',
+                    routeLink: 'bestuur-vrijwilligers'
+                },
+                {
+                    name: 'Sponsors',
+                    routeLink: 'sponsors'
+                },
+                {
+                    name: 'Samenwerking',
+                    routeLink: 'samenwerking'
+                },
+                {
+                    name: 'Vroeger en nu',
+                    routeLink: 'vroeger-en-nu'
+                }
+            ]
+        },
+        {
+            name: 'Foto\'s'
+        },
+        {
+            name: 'Contact',
+            routeLink: 'contact'
+        },
+        {
+            name: 'Nieuwsbrief',
+            routeLink: 'nieuwsbrief'
+        },
     ]
 }
