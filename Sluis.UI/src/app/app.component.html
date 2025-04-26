@@ -1,34 +1,66 @@
-<mat-toolbar style="height: 64px;">
-    <a [routerLink]="['/']">
-        <img src="img/speeltuin_de_sluis.png" alt="Speeltuin de Sluis" width="200" height="auto">
-    </a>
+<mat-drawer-container class="drawer-container">
+    <mat-drawer #drawer mode="over" position="end">
+        <div class="drawer-header">
+            <button mat-icon-button (click)="drawer.toggle()" class="close-drawer-button">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
 
-    <button mat-button *ngIf="!smallScreen">Ontdek de speeltuin</button>
+        <mat-accordion single>
+            @for (route of routes; track $index) {
+            <mat-expansion-panel class="simple-panel" [hideToggle]="!route.subNavigationPaths"
+                (click)="navigate(route, panel)" #panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{route.name}}</mat-panel-title>
+                </mat-expansion-panel-header>
 
-    <button mat-button *ngIf="!smallScreen" [matMenuTriggerFor]="planBezoek">Plan je bezoek</button>
-    <mat-menu #planBezoek="matMenu">
-        <button mat-menu-item>Entree prijzen</button>
-        <button mat-menu-item>Openingstijden</button>
-        <button mat-menu-item>Abonnement</button>
-        <button mat-menu-item>Huisregels</button>
-        <button mat-menu-item>Route</button>
-    </mat-menu>
+                @for (subpath of route.subNavigationPaths; track $index) {
+                <div class="submenu-item" (click)="navigate(subpath)">{{subpath.name}}</div>
+                }
+            </mat-expansion-panel>
+            }
+        </mat-accordion>
+    </mat-drawer>
 
-    <span class="spacer"></span>
+    <mat-drawer-content class="drawer-content">
+        <mat-toolbar style="height: 64px;">
+            <a [routerLink]="['/']">
+                <img src="img/speeltuin_de_sluis.png" alt="Speeltuin de Sluis" width="200" height="auto">
+            </a>
 
-    <button mat-icon-button [routerLink]="['/admin']">
-        <mat-icon>settings</mat-icon>
-    </button>
+            @for (route of routes; track $index) {
+            <button mat-button *ngIf="!smallScreen && !route.subNavigationPaths" routerLink="/{{route.routeLink}}">
+                {{route.name}}
+            </button>
 
-    <button mat-icon-button *ngIf="smallScreen">
-        <mat-icon>menu</mat-icon>
-    </button>
-</mat-toolbar>
+            <button mat-button *ngIf="!smallScreen && route.subNavigationPaths"
+                [matMenuTriggerFor]="menu">{{route.name}}</button>
 
-<div class="content-container">
-    <div class="router">
-        <router-outlet></router-outlet>
-    </div>
+            <mat-menu #menu="matMenu">
+                @for (subpath of route.subNavigationPaths; track $index) {
+                <button mat-menu-item routerLink="/{{subpath.routeLink}}">{{subpath.name}}</button>
+                }
+            </mat-menu>
+            }
 
-    <news-component class="news" *ngIf="!hideNews && !smallScreen"></news-component>
-</div>
+            <span class="spacer"></span>
+
+            <button mat-icon-button [routerLink]="['/admin']">
+                <mat-icon>settings</mat-icon>
+            </button>
+
+            <button mat-icon-button *ngIf="smallScreen" (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+
+
+        <div class="content-container">
+            <div class="router">
+                <router-outlet></router-outlet>
+            </div>
+
+            <news-component class="news" *ngIf="!hideNews && !smallScreen"></news-component>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
