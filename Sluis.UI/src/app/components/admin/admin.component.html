@@ -1,1 +1,3 @@
 admin pagina
+
+<button (click)="getAlbums()" *ngIf="hasRole(Roles.ManageAlbums)">Get Albums</button>

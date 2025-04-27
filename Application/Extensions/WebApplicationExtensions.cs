@@ -2,10 +2,9 @@
 using Data;
 using Domain;
 using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Application;
 
@@ -28,6 +27,37 @@ internal static class WebApplicationExtensions
             .AddSwaggerGen()
             .AddFluentValidationAutoValidation();
 
+        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+            options.Authority = "https://accounts.google.com";
+
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidIssuer = "https://accounts.google.com",
+                ValidateAudience = true,
+                ValidAudience = appConfiguration.Authentication.Google.ClientId,
+                ValidateLifetime = true
+            };
+
+            options.Events = new JwtBearerEvents
+            {
+                OnAuthenticationFailed = context =>
+                {
+                    Console.WriteLine($"Authentication failed: {context.Exception.Message}");
+                    return Task.CompletedTask;
+                },
+                OnTokenValidated = context =>
+                {
+                    Console.WriteLine("Token validated successfully.");
+                    return Task.CompletedTask;
+                }
+            };
+        });
+
+        builder.Services.AddAuthorization();
+
         return builder
             .Build()
             .UseServices(appConfiguration);
@@ -40,6 +70,9 @@ internal static class WebApplicationExtensions
             .UseSwagger()
             .UseSwaggerUI()
             .UseDeveloperExceptionPage();
+
+        app.UseAuthentication();
+        app.UseAuthorization();
 
         app.MapControllers();
 

@@ -1,5 +1,6 @@
 ﻿using Clean.Core;
 using Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application;
@@ -9,6 +10,8 @@ namespace Application;
 public sealed class FotoController(IInputHandler handler) : CleanController
 {
     [HttpPost]
+    [Authorize]
+    [Authenticate(AuthenticationRoles.ManageFotos)]
     public async Task<ActionResult<CreateFotoOutput>> Create(CreateFotoInput input) =>
         CreatedAtAction(nameof(Get), await handler.HandleAsync(input), ("id", x => x.Id));
 
@@ -21,10 +24,14 @@ public sealed class FotoController(IInputHandler handler) : CleanController
         Ok(await handler.HandleAsync(new GetFotoInput(id)));
 
     [HttpPatch("{id:guid}")]
-    public async Task<ActionResult<UpdateFotoOutput>> UpdateStartnummer(Guid id, UpdateFotoInput input) =>
+    [Authorize]
+    [Authenticate(AuthenticationRoles.ManageFotos)]
+    public async Task<ActionResult<UpdateFotoOutput>> Update(Guid id, UpdateFotoInput input) =>
         Ok(await handler.HandleAsync(input.SetId(id)));
 
     [HttpDelete("{id:guid}")]
+    [Authorize]
+    [Authenticate(AuthenticationRoles.ManageFotos)]
     public async Task<IActionResult> Delete(Guid id) =>
         NoContent(await handler.HandleAsync(new DeleteFotoInput(id)));
 }

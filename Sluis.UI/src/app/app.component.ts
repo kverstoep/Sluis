@@ -5,7 +5,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NewsComponent } from "./components/news/news.component";
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { INavigationPath, NavigationPaths } from './navigation-path';
 import { MatExpansionPanel } from '@angular/material/expansion';
@@ -18,7 +18,8 @@ import { MatExpansionPanel } from '@angular/material/expansion';
         MatSidenavModule,
         NewsComponent,
         MatListModule,
-        MatExpansionModule
+        MatExpansionModule,
+        RouterModule
     ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
@@ -34,9 +35,10 @@ export class AppComponent implements OnInit {
 
     constructor(
         private responsive: BreakpointObserver,
-        private router: Router) {
+        private router: Router
+    ) {
         this.router.events.subscribe(() => {
-            this.hideNews = this.routesToHideNews.some(prefix => this.router.url.startsWith(prefix));
+            this.hideNews = this.routesToHideNews.some(route => this.router.url.startsWith(route));
         });
     }
 

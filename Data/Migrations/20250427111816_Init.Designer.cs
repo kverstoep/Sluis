@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Data.Migrations
 {
     [DbContext(typeof(SluisDbContext))]
-    [Migration("20250423184018_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250427111816_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("sluis")
-                .HasAnnotation("ProductVersion", "8.0.13")
+                .HasAnnotation("ProductVersion", "8.0.15")
                 .HasAnnotation("Proxies:ChangeTracking", false)
                 .HasAnnotation("Proxies:CheckEquality", false)
                 .HasAnnotation("Proxies:LazyLoading", true)
@@ -68,6 +68,28 @@ namespace Data.Migrations
                         .HasDatabaseName("ix_foto_album_id");
 
                     b.ToTable("foto", "sluis");
+                });
+
+            modelBuilder.Entity("Domain.Gebruiker", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("email");
+
+                    b.Property<int[]>("Roles")
+                        .HasColumnType("integer[]")
+                        .HasColumnName("roles");
+
+                    b.HasKey("Id")
+                        .HasName("pk_gebruiker");
+
+                    b.ToTable("gebruiker", "sluis");
                 });
 
             modelBuilder.Entity("Domain.Foto", b =>

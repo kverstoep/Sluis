@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,6 +25,20 @@ namespace Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("pk_album", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "gebruiker",
+                schema: "sluis",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uuid", nullable: false),
+                    email = table.Column<string>(type: "text", nullable: false),
+                    roles = table.Column<int[]>(type: "integer[]", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_gebruiker", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -59,6 +74,10 @@ namespace Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "foto",
+                schema: "sluis");
+
+            migrationBuilder.DropTable(
+                name: "gebruiker",
                 schema: "sluis");
 
             migrationBuilder.DropTable(

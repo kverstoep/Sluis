@@ -6,6 +6,8 @@ internal sealed class AppConfiguration
 {
     public string Connectionstring { get; private set; }
 
+    public AuthenticationConfiguration Authentication { get; private set; }
+
     public string DefaultPolicyName => Cors.First().Key;
 
     public IReadOnlyCollection<CorsConfiguration> CorsConfiguration => Cors
@@ -24,4 +26,14 @@ internal sealed class CorsConfiguration(string name, string[] origins)
         .WithOrigins(origins)
         .AllowAnyMethod()
         .AllowAnyHeader();
+}
+
+internal sealed class AuthenticationConfiguration()
+{
+    public GoogleConfiguration Google { get; set; }
+}
+
+internal sealed class GoogleConfiguration()
+{
+    public string ClientId { get; private set; }
 }
