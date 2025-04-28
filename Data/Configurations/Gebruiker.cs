@@ -12,7 +12,13 @@ internal sealed class GebruikerEntityTypeConfiguration : IEntityTypeConfiguratio
             .Property(gebruiker => gebruiker.Id)
             .ValueGeneratedOnAdd();
 
-        builder.Property(gebruiker => gebruiker.Email)
-               .IsRequired();
+        builder
+            .Property(gebruiker => gebruiker.Email)
+            .IsRequired();
+
+        builder
+            .Property(gebruiker => gebruiker.Roles)
+            .HasConversion(new UserRoleArrayConverter())
+            .Metadata.SetValueComparer(Comparers.UserRoleArrayComparer);
     }
 }

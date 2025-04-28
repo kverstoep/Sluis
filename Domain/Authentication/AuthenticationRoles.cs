@@ -1,8 +1,8 @@
 ﻿namespace Domain;
 
-public enum AuthenticationRoles
+public enum UserRole
 {
-    ManageAlbums = 0,
-    ManageFotos = 1
+    ManageAlbums,
+    ManageFotos
 }
 

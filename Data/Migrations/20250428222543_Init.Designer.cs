@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Data.Migrations
 {
     [DbContext(typeof(SluisDbContext))]
-    [Migration("20250427111816_Init")]
+    [Migration("20250428222543_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -82,8 +82,8 @@ namespace Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("email");
 
-                    b.Property<int[]>("Roles")
-                        .HasColumnType("integer[]")
+                    b.Property<string[]>("Roles")
+                        .HasColumnType("text[]")
                         .HasColumnName("roles");
 
                     b.HasKey("Id")

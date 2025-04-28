@@ -34,7 +34,7 @@ namespace Data.Migrations
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
                     email = table.Column<string>(type: "text", nullable: false),
-                    roles = table.Column<int[]>(type: "integer[]", nullable: true)
+                    roles = table.Column<string[]>(type: "text[]", nullable: true)
                 },
                 constraints: table =>
                 {

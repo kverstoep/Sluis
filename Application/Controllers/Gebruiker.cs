@@ -11,7 +11,6 @@ public sealed class GebruikerController(IInputHandler handler) : CleanController
 {
     [HttpGet]
     [Authorize]
-    [Authenticate]
     public async Task<ActionResult<GetGebruikerOutput>> Get(Guid id)
     {
         var emailClaimType = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress";

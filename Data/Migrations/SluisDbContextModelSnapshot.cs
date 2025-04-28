@@ -79,8 +79,8 @@ namespace Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("email");
 
-                    b.Property<int[]>("Roles")
-                        .HasColumnType("integer[]")
+                    b.Property<string[]>("Roles")
+                        .HasColumnType("text[]")
                         .HasColumnName("roles");
 
                     b.HasKey("Id")

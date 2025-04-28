@@ -5,7 +5,7 @@ namespace Domain;
 internal class Gebruiker : Entity
 {
     public string Email { get; private set; }
-    public AuthenticationRoles[] Roles { get; private set; }
+    public UserRole[] Roles { get; private set; }
 
     protected Gebruiker() { }
 

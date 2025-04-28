@@ -10,7 +10,7 @@ public sealed class GebruikerModel
     {
         Id = gebruiker.Id;
         Email = gebruiker.Email;
-        Roles = gebruiker.Roles.Select(role => role.ToString());
+        Roles = gebruiker.Roles?.Select(role => role.ToString());
     }
 
     internal static GebruikerModel Create(Gebruiker gebruiker) =>

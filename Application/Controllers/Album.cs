@@ -10,8 +10,7 @@ namespace Application;
 public sealed class AlbumController(IInputHandler handler) : CleanController
 {
     [HttpPost]
-    [Authorize]
-    [Authenticate(AuthenticationRoles.ManageAlbums)]
+    [Authorize(Policy = nameof(UserRole.ManageAlbums))]
     public async Task<ActionResult<CreateAlbumOutput>> Create(CreateAlbumInput input) =>
         CreatedAtAction(nameof(Get), await handler.HandleAsync(input), ("id", x => x.Id));
 
@@ -24,14 +23,12 @@ public sealed class AlbumController(IInputHandler handler) : CleanController
         Ok(await handler.HandleAsync(new GetAlbumInput(id)));
 
     [HttpPatch("{id:guid}")]
-    [Authorize]
-    [Authenticate(AuthenticationRoles.ManageAlbums)]
+    [Authorize(Policy = nameof(UserRole.ManageAlbums))]
     public async Task<ActionResult<UpdateAlbumOutput>> UpdateStartnummer(Guid id, UpdateAlbumInput input) =>
         Ok(await handler.HandleAsync(input.SetId(id)));
 
     [HttpDelete("{id:guid}")]
-    [Authorize]
-    [Authenticate(AuthenticationRoles.ManageAlbums)]
+    [Authorize(Policy = nameof(UserRole.ManageAlbums))]
     public async Task<IActionResult> Delete(Guid id) =>
         NoContent(await handler.HandleAsync(new DeleteAlbumInput(id)));
 }
