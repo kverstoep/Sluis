@@ -1,10 +1,8 @@
-﻿using Application.Authorization;
-using Clean.Core;
+﻿using Clean.Core;
 using Data;
 using Domain;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.IdentityModel.Tokens;
 
@@ -56,17 +54,6 @@ internal static class WebApplicationExtensions
                     return Task.CompletedTask;
                 }
             };
-        });
-
-        builder.Services.AddSingleton<IAuthorizationHandler, RoleAuthorizationHandler>();
-
-        builder.Services.AddAuthorization(options =>
-        {
-            options.AddPolicy(nameof(UserRole.ManageFotos), policy =>
-                policy.Requirements.Add(new RoleRequirement(UserRole.ManageFotos)));
-
-            options.AddPolicy(nameof(UserRole.ManageAlbums), policy =>
-                policy.Requirements.Add(new RoleRequirement(UserRole.ManageAlbums)));
         });
 
         return builder

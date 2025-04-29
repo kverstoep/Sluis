@@ -2,11 +2,11 @@
 
 namespace Domain;
 
-public sealed class GetGebruikerOutput : IOutput
+public sealed class GetCurrentGebruikerOutput : IOutput
 {
     public GebruikerModel Gebruiker { get; }
 
-    internal GetGebruikerOutput(Gebruiker gebruiker)
+    internal GetCurrentGebruikerOutput(Gebruiker gebruiker)
     {
         Gebruiker = GebruikerModel.Create(gebruiker);
     }

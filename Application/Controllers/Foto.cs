@@ -10,7 +10,7 @@ namespace Application;
 public sealed class FotoController(IInputHandler handler) : CleanController
 {
     [HttpPost]
-    [Authorize(Policy = nameof(UserRole.ManageFotos))]
+    [Authorize(Roles = nameof(UserRole.ManageFotos))]
     public async Task<ActionResult<CreateFotoOutput>> Create(CreateFotoInput input) =>
         CreatedAtAction(nameof(Get), await handler.HandleAsync(input), ("id", x => x.Id));
 
@@ -23,12 +23,12 @@ public sealed class FotoController(IInputHandler handler) : CleanController
         Ok(await handler.HandleAsync(new GetFotoInput(id)));
 
     [HttpPatch("{id:guid}")]
-    [Authorize(Policy = nameof(UserRole.ManageFotos))]
+    [Authorize(Roles = nameof(UserRole.ManageFotos))]
     public async Task<ActionResult<UpdateFotoOutput>> Update(Guid id, UpdateFotoInput input) =>
         Ok(await handler.HandleAsync(input.SetId(id)));
 
     [HttpDelete("{id:guid}")]
-    [Authorize(Policy = nameof(UserRole.ManageFotos))]
+    [Authorize(Roles = nameof(UserRole.ManageFotos))]
     public async Task<IActionResult> Delete(Guid id) =>
         NoContent(await handler.HandleAsync(new DeleteFotoInput(id)));
 }

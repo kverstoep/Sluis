@@ -1,4 +1,5 @@
-﻿using Clean.Core;
+﻿using System.Security.Claims;
+using Clean.Core;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,14 +10,12 @@ namespace Application;
 [Route("api/[controller]")]
 public sealed class GebruikerController(IInputHandler handler) : CleanController
 {
-    [HttpGet]
+    [HttpGet("current")]
     [Authorize]
-    public async Task<ActionResult<GetGebruikerOutput>> Get(Guid id)
+    public async Task<ActionResult<GetCurrentGebruikerOutput>> Get()
     {
-        var emailClaimType = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress";
-        var userEmail = HttpContext.User.Claims.FirstOrDefault(c => c.Type == emailClaimType)?.Value;
-
-        return Ok(await handler.HandleAsync(new GetGebruikerInput(id, userEmail)));
+        var email = HttpContext.User.Claims.First(claim => claim.Type == ClaimTypes.Email)?.Value;
+        return Ok(await handler.HandleAsync(new GetCurrentGebruikerInput(email)));
     }
        
 }

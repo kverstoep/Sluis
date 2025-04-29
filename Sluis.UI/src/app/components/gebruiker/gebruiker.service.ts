@@ -19,6 +19,6 @@ export class GebruikerService extends BaseService {
     }
 
     getGebruiker(): Observable<any> {
-        return this.getWithAuth<IGebruiker>(`${this.apiUrl}/gebruiker`)
+        return this.getWithAuth<IGebruiker>(`${this.apiUrl}/gebruiker/current`)
     }
 }
