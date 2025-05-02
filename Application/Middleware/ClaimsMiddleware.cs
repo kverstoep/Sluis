@@ -14,9 +14,14 @@ public class ClaimsMiddleware
 
     public async Task InvokeAsync(HttpContext context, IInputHandler handler)
     {
-        var email = context.User.Claims.First(claim => claim.Type == ClaimTypes.Email)?.Value;
+        var email = context.User.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.Email)?.Value;
 
-        var output = await handler.HandleAsync(new GetCurrentGebruikerInput(email)) as GetCurrentGebruikerOutput;
+        if(email == null) {
+            await next(context);
+            return;
+        }
+
+        var output = await handler.HandleAsync(new GetGebruikerByEmailInput(email)) as GetGebruikerByEmailOutput;
         if (output?.Gebruiker != null)
         {
             var claimsIdentity = context.User.Identity as ClaimsIdentity;

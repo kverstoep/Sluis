@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -8,8 +9,6 @@ internal sealed class SluisDbContext(DbContextOptions<SluisDbContext> options) :
 {
     public const string DefaultSchema = "sluis";
     public const string MigrationsTable = "ef_migrations";
-
-    //public DbSet<KnwuWedstrijd> KnwuWedstrijden { get; private set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

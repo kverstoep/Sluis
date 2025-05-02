@@ -1,4 +1,6 @@
 ﻿using Clean.Core;
+using Domain;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,7 +10,8 @@ namespace Data;
 
 public static class DataServiceCollectionExtensions
 {
-    public static IServiceCollection AddData(this IServiceCollection services, string connectionString, IWebHostEnvironment environment) =>
+    public static IServiceCollection AddData(this IServiceCollection services, string connectionString, IWebHostEnvironment environment)
+    {
         services
             .AddCleanEntityFramework<SluisDbContext>(options => options
                 .EnableDetailedErrors(!environment.IsProduction())
@@ -16,4 +19,12 @@ public static class DataServiceCollectionExtensions
                 .UseSnakeCaseNamingConvention()
                 .UseNpgsql(connectionString, options =>
                     options.MigrationsHistoryTable(SluisDbContext.MigrationsTable)));
+
+        services.AddDataProtection();
+
+        var dataProtectionProvider = services.BuildServiceProvider().GetRequiredService<IDataProtectionProvider>();
+        EncryptionHelper.Initialize(dataProtectionProvider);
+
+        return services;
+    }
 }

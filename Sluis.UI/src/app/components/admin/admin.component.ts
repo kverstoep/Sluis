@@ -5,10 +5,11 @@ import { authCodeFlowConfig } from './auth.config';
 import { AlbumService } from '../album/album.service';
 import { GebruikerService } from '../gebruiker/gebruiker.service';
 import { IGebruiker, Role } from '../gebruiker/gebruiker';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
     selector: 'admin-component',
-    imports: [...materialImports],
+    imports: [...materialImports, MatTabsModule],
     templateUrl: './admin.component.html',
     styleUrl: './admin.component.scss'
 })
@@ -39,8 +40,8 @@ export class AdminComponent implements OnInit {
             if (!this.oauthService.hasValidIdToken()) {
                 this.oauthService.initCodeFlow();
             } else {
-                this.gebruikersService.getGebruiker().subscribe(result => {
-                    this.gebruiker = result.gebruiker;
+                this.gebruikersService.getGebruiker().subscribe(gebruiker => {
+                    this.gebruiker = gebruiker;
                 });
             }
         });
@@ -54,11 +55,24 @@ export class AdminComponent implements OnInit {
         });
     }
 
-    hasRole(role: Role): boolean {
-        if (this.gebruiker) {
-            return this.gebruiker?.roles.includes(role)
+    createGebruiker(): void {
+        const gebruiker: IGebruiker = {
+            email: 'test@gmail.com',
+            roles: [Role.ManageAlbums, Role.ManageFotos, Role.ManageGebruikers]
         }
-        return false;
+
+        this.gebruikersService.createGebruiker(gebruiker).subscribe({
+            next: (response) => console.log('Data:', response),
+            error: (err) => console.error('Error:', err),
+            complete: () => console.log('Request completed')
+        });
+    }
+
+    hasRole(role: Role): boolean {
+        if (!this.gebruiker) {
+            return false;
+        }
+        return this.gebruiker?.roles.includes(role)
     }
 
     private configureOauth(): void {

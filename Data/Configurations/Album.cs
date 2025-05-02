@@ -11,5 +11,8 @@ internal sealed class AlbumEntityTypeConfiguration : IEntityTypeConfiguration<Al
         builder
             .Property(album => album.Id)
             .ValueGeneratedOnAdd();
+
+        builder.Property(album => album.Name)
+            .IsRequired();
     }
 }

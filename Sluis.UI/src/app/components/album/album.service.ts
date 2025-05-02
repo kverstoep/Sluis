@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { IAlbum } from './album';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { BaseService } from '../shared/base-service';
@@ -9,8 +9,6 @@ import { BaseService } from '../shared/base-service';
     providedIn: 'root'
 })
 export class AlbumService extends BaseService {
-    private apiUrl = 'http://localhost:6001/api';
-
     constructor(
         httpClient: HttpClient,
         oAuthService: OAuthService
@@ -18,7 +16,8 @@ export class AlbumService extends BaseService {
         super(httpClient, oAuthService);
     }
 
-    getAlbums(): Observable<any> {
-        return this.getWithAuth<IAlbum>(`${this.apiUrl}/album`)
+    getAlbums(): Observable<IAlbum> {
+        return this.getWithAuth<any>('album')
+            .pipe(map((result) => result.albums));
     }
 }
