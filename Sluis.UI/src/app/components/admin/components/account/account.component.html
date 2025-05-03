@@ -4,9 +4,9 @@
             *ngIf="gebruiker?.imageUrl">
         </div>
         <mat-card-title>{{gebruiker?.email}}</mat-card-title>
-        <mat-card-subtitle>Rollen:
+        <mat-card-subtitle class="subtitle">Rollen: <br />
             @for (rol of gebruiker?.roles; track $index) {
-            <span>{{rol}}, </span>
+            <span> &#x2022; {{rol}} <br /></span>
             }
         </mat-card-subtitle>
     </mat-card-header>

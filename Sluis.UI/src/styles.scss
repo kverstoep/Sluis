@@ -28,3 +28,7 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.red-snackbar {
+    @include mat.snack-bar-overrides((container-color: red, supporting-text-color: white));
+}

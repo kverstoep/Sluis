@@ -7,6 +7,7 @@ public sealed class GetAllGebruikersOutput : IOutput
 
     internal GetAllGebruikersOutput(IEnumerable<Gebruiker> gebruikers)
     {
-        Gebruikers = [.. gebruikers.Select(GebruikerModel.Create)];
+        var orderedGebruikers = gebruikers.OrderBy(gebruiker => gebruiker.Email);
+        Gebruikers = [.. orderedGebruikers.Select(GebruikerModel.Create)];
     }
 }
