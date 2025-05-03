@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Gebruiker verwijderen</h2>
+<mat-dialog-content class="dialog-content">
+    <b>Wilt u {{gebruiker.email}} verwijderen?</b>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="close()">Cancel</button>
+    <button mat-raised-button class="warning" color="warn" (click)="delete()">
+        Verwijder
+    </button>
+</mat-dialog-actions>

@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Gebruiker {{ actie }}</h2>
+<mat-dialog-content class="dialog-content">
+    <form [formGroup]="gebruikerForm">
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+            <mat-error *ngIf="gebruikerForm.controls.email.invalid && gebruikerForm.controls.email.touched">
+                Invalid email format
+            </mat-error>
+        </mat-form-field>
+
+        <p><mat-checkbox formControlName="manageFotos">Manage foto's</mat-checkbox></p>
+        <p><mat-checkbox formControlName="manageGebruikers">Manage gebruikers</mat-checkbox></p>
+
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="close()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="save()">
+        Opslaan
+    </button>
+</mat-dialog-actions>

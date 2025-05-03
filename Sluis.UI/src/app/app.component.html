@@ -55,13 +55,6 @@
             </button>
         </mat-toolbar>
 
-
-        <div class="content-container">
-            <div class="router">
-                <router-outlet></router-outlet>
-            </div>
-
-            <news-component class="news" *ngIf="!hideNews && !smallScreen"></news-component>
-        </div>
+        <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>

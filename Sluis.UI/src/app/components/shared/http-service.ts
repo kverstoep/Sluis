@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { OAuthService } from "angular-oauth2-oidc";
-import { Observable, of } from "rxjs";
+import { Observable } from "rxjs";
 
-export class BaseService {
+export class HttpService {
     private apiUrl = 'http://localhost:6001/api/';
 
     constructor(
@@ -11,14 +11,24 @@ export class BaseService {
     ) {
     }
 
-    getWithAuth<T>(url: string): Observable<T> {
+    protected getWithAuth<T>(url: string): Observable<T> {
         const headers = this.getHeaders();
         return this.httpClient.get<T>(`${this.apiUrl}${url}`, { headers });
     }
 
-    postWithAuth<T>(url: string, entity: T): Observable<T> {
+    protected postWithAuth<T>(url: string, entity: T): Observable<T> {
         const headers = this.getHeaders();
         return this.httpClient.post<T>(`${this.apiUrl}${url}`, entity, { headers });
+    }
+
+    protected patchWithAuth<T>(url: string, id: string, entity: T): Observable<T> {
+        const headers = this.getHeaders();
+        return this.httpClient.patch<T>(`${this.apiUrl}${url}/${id}`, entity, { headers });
+    }
+
+    protected deleteWithAuth<T>(url: string, id: string): Observable<T> {
+        const headers = this.getHeaders();
+        return this.httpClient.delete<T>(`${this.apiUrl}${url}/${id}`, { headers });
     }
 
     private getHeaders(): HttpHeaders {

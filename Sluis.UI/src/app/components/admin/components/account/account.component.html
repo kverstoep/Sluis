@@ -1,0 +1,13 @@
+<mat-card class="gebruiker-card" appearance="outlined">
+    <mat-card-header>
+        <div mat-card-avatar class="user-image" [style]="{'background-image': 'url(' + gebruiker.imageUrl + ')'}"
+            *ngIf="gebruiker?.imageUrl">
+        </div>
+        <mat-card-title>{{gebruiker?.email}}</mat-card-title>
+        <mat-card-subtitle>Rollen:
+            @for (rol of gebruiker?.roles; track $index) {
+            <span>{{rol}}, </span>
+            }
+        </mat-card-subtitle>
+    </mat-card-header>
+</mat-card>

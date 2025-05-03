@@ -1,8 +1,26 @@
 import { Routes } from '@angular/router';
-import { AdminComponent } from './admin.component';
-import { ManageUsersComponent } from './components/gebruikers/gebruikers.component';
+import { GebruikersComponent } from './components/gebruikers/gebruikers.component';
+import { FotosComponent } from './components/fotos/fotos.component';
+import { AccountComponent } from './components/account/account.component';
+import { Role } from '../gebruiker/gebruiker';
+import { AuthGuard } from '../../auth-guard';
 
 export const adminRoutes: Routes = [
-    { path: '', component: AdminComponent, title: 'Admin Dashboard' },
-    { path: 'gebruikers', component: ManageUsersComponent, title: 'Manage Users' }
+    { path: '', redirectTo: 'account', pathMatch: 'full' },
+    {
+        path: 'account',
+        component: AccountComponent
+    },
+    {
+        path: 'gebruikers',
+        component: GebruikersComponent,
+        canActivate: [AuthGuard],
+        data: { requiredRole: Role.ManageGebruikers }
+    },
+    {
+        path: 'fotos',
+        component: FotosComponent,
+        canActivate: [AuthGuard],
+        data: { requiredRole: Role.ManageFotos }
+    }
 ];

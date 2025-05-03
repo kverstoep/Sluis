@@ -26,6 +26,8 @@ public class ClaimsMiddleware
         {
             var claimsIdentity = context.User.Identity as ClaimsIdentity;
 
+            claimsIdentity?.AddClaim(new Claim(ClaimTypes.Role, UserRole.Gebruiker.ToString()));
+
             foreach (var role in output.Gebruiker.Roles)
             {
                 claimsIdentity?.AddClaim(new Claim(ClaimTypes.Role, role.ToString()));

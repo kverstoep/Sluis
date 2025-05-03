@@ -1,0 +1,27 @@
+<mat-toolbar class="header">
+    <span>Gebruikers</span>
+    <button mat-raised-button class="add-button" (click)="openAddGebruikerDialog()">Toevoegen</button>
+</mat-toolbar>
+
+<div style="overflow: auto;">
+    @for (gebruiker of gebruikers; track $index) {
+    <mat-card class="gebruiker-card" appearance="outlined">
+        <mat-card-header>
+            <mat-card-title>{{gebruiker?.email}}</mat-card-title>
+            <mat-card-subtitle>Rollen:
+                @for (rol of gebruiker?.roles; track $index) {
+                <span>{{rol}}, </span>
+                }
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-icon-button (click)="openEditGebruikerDialog(gebruiker)" aria-label="edit">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="openDeleteGebruikerDialog(gebruiker)" aria-label="edit">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+    }
+</div>

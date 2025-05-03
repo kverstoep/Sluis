@@ -1,0 +1,19 @@
+:host {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.gebruiker-card {
+    margin: 16px;
+}
+
+.header {
+    background-color: var(--mat-sidenav-content-background-color);
+    padding-bottom: 4px;
+    padding-top: 8px;
+
+    .add-button {
+        margin-left: 12px;
+    }
+}

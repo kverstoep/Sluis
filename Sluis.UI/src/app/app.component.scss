@@ -48,17 +48,4 @@
         }
 
     }
-
-    .content-container {
-        display: flex;
-        flex: 1;
-
-        .router {
-            flex: 2;
-        }
-
-        .news {
-            flex: 1;
-        }
-    }
 }

@@ -1,16 +1,19 @@
-<!-- <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-    @for (link of links; track link) {
-      <a mat-tab-link
-        (click)="activeLink = link"
-        [active]="activeLink == link"> {{link}} </a>
-    }
-    <a mat-tab-link disabled>Disabled Link</a>
-  </nav>
-  <mat-tab-nav-panel #tabPanel>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link [routerLink]="'/admin/account'" routerLinkActive #account="routerLinkActive"
+        [active]="account.isActive">
+        Account
+    </a>
+
+    <a mat-tab-link [routerLink]="'/admin/fotos'" routerLinkActive #fotos="routerLinkActive" [active]="fotos.isActive"
+        [disabled]="!hasRole(Roles.ManageFotos)">
+        Foto's
+    </a>
+
+    <a mat-tab-link [routerLink]="'/admin/gebruikers'" routerLinkActive #gebruikers="routerLinkActive"
+        [active]="gebruikers.isActive" [disabled]="!hasRole(Roles.ManageGebruikers)">
+        Gebruikers
+    </a>
+</nav>
+<mat-tab-nav-panel #tabPanel class="nav-panel">
     <router-outlet></router-outlet>
-  </mat-tab-nav-panel> -->
-
-admin pagina
-
-<button (click)="getAlbums()" *ngIf="hasRole(Roles.ManageAlbums)">Get Albums</button>
-<button (click)="createGebruiker()">Create gebruiker</button>
+</mat-tab-nav-panel>

@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { materialImports } from './material.imports';
 import { MatMenuModule } from '@angular/material/menu';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { NewsComponent } from "./components/news/news.component";
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { Router, RouterModule } from '@angular/router';
@@ -16,7 +15,6 @@ import { MatExpansionPanel } from '@angular/material/expansion';
         ...materialImports,
         MatMenuModule,
         MatSidenavModule,
-        NewsComponent,
         MatListModule,
         MatExpansionModule,
         RouterModule

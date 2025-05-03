@@ -5,7 +5,7 @@ namespace Domain;
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum UserRole
 {
-    ManageAlbums,
+    Gebruiker,
     ManageFotos,
     ManageGebruikers
 }

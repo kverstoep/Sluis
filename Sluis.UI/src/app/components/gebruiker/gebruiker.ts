@@ -1,11 +1,11 @@
 export interface IGebruiker {
     id?: string;
+    imageUrl?: string;
     email: string;
     roles: Role[];
 }
 
 export enum Role {
-    ManageAlbums = 'ManageAlbums',
     ManageFotos = 'ManageFotos',
     ManageGebruikers = 'ManageGebruikers'
 }

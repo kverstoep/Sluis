@@ -3,12 +3,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, Observable, of } from 'rxjs';
 import { IAlbum } from './album';
 import { OAuthService } from 'angular-oauth2-oidc';
-import { BaseService } from '../shared/base-service';
+import { HttpService } from '../shared/http-service';
 
 @Injectable({
     providedIn: 'root'
 })
-export class AlbumService extends BaseService {
+export class AlbumService extends HttpService {
     constructor(
         httpClient: HttpClient,
         oAuthService: OAuthService

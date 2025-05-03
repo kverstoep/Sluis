@@ -15,10 +15,9 @@ internal class Gebruiker : Entity
         Roles = input.Roles;
     }
 
-    //public void Update(UpdateGebruikerInput input)
-    //{
-    //    Email = input.Email;
-    //    ManageFotos = input.ManageFotos;
-    //    ManageAlbums = input.ManageAlbums;
-    //}
+    public void Update(UpdateGebruikerInput input)
+    {
+        Email = input.Email;
+        Roles = input.Roles;
+    }
 }
