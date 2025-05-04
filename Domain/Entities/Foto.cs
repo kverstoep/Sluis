@@ -4,23 +4,18 @@ namespace Domain;
 
 internal class Foto : Entity
 {
-    public string Name { get; private set; }
-
+    public byte[] Image { get; private set; }
     public Guid AlbumId { get; set; }
+
     public virtual Album Album { get; set; }
 
     protected Foto() { }
 
     public Foto(CreateFotoInput input)
     {
-        Name = input.Name;
         AlbumId = input.AlbumId;
+        Image = input.Image;
 
         events.Add(new FotoCreatedEvent(this));
-    }
-
-    public void Update(UpdateFotoInput input)
-    {
-        Name = input.Name;
     }
 }

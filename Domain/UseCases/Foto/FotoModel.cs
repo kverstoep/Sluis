@@ -4,12 +4,12 @@ public sealed class FotoModel
 {
     public Guid Id { get; }
 
-    public string Name { get; }
+    public byte[] Image { get; }
 
     internal FotoModel(Foto foto)
     {
         Id = foto.Id;
-        Name = foto.Name;
+        Image = foto.Image;
     }
 
     internal static FotoModel Create(Foto foto) =>

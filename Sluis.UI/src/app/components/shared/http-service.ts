@@ -10,6 +10,10 @@ export class HttpService {
         private oAuthService: OAuthService
     ) {
     }
+    protected getByIdWithAuth<T>(url: string, id: string): Observable<T> {
+        const headers = this.getHeaders();
+        return this.httpClient.get<T>(`${this.apiUrl}${url}/${id}`, { headers });
+    }
 
     protected getWithAuth<T>(url: string): Observable<T> {
         const headers = this.getHeaders();

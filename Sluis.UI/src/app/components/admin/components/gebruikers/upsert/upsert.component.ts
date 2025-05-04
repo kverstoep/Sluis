@@ -40,6 +40,15 @@ export class UpsertGebruikerDialog {
             return;
         }
 
+        const gebruiker = this.createGebruiker();
+        this.saveGebruiker(gebruiker)
+    }
+
+    close(): void {
+        this.dialogRef.close();
+    }
+
+    private createGebruiker(): IGebruiker {
         const roles: Role[] = [
             this.gebruikerForm.value.manageFotos ? Role.ManageFotos : null,
             this.gebruikerForm.value.manageGebruikers ? Role.ManageGebruikers : null
@@ -51,6 +60,10 @@ export class UpsertGebruikerDialog {
             roles: roles
         }
 
+        return gebruiker;
+    }
+
+    private saveGebruiker(gebruiker: IGebruiker): void {
         if (!gebruiker.id) {
             this.gebruikerService.createGebruiker(gebruiker).subscribe(_ => {
                 this.dialogRef.close();
@@ -62,9 +75,5 @@ export class UpsertGebruikerDialog {
                 this.saved.emit();
             });
         }
-    }
-
-    close(): void {
-        this.dialogRef.close();
     }
 }

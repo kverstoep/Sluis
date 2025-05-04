@@ -1,0 +1,13 @@
+<header-toolbar title="Albums">
+    <button mat-raised-button class="add-button" (click)="openAddAlbumDialog()">Toevoegen</button>
+</header-toolbar>
+
+<div class="album-card-container">
+    @for (album of albums; track $index) {
+    <mat-card class="album-card" appearance="outlined" [routerLink]="`/admin/albums/${album.id}`">
+        <mat-card-header>
+            <mat-card-title>{{album?.name}}</mat-card-title>
+        </mat-card-header>
+    </mat-card>
+    }
+</div>

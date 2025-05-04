@@ -4,8 +4,8 @@
         Account
     </a>
 
-    <a mat-tab-link [routerLink]="'/admin/fotos'" routerLinkActive #fotos="routerLinkActive" [active]="fotos.isActive"
-        [disabled]="!hasRole(Roles.ManageFotos)">
+    <a mat-tab-link [routerLink]="'/admin/albums'" routerLinkActive #albums="routerLinkActive"
+        [active]="albums.isActive" [disabled]="!hasRole(Roles.ManageFotos)">
         Foto's
     </a>
 

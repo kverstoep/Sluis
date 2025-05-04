@@ -4,8 +4,16 @@
     flex-direction: column;
 }
 
-.gebruiker-card {
-    margin: 16px;
+.gebruiker-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+
+    .gebruiker-card {
+        margin: 16px;
+        width: 600px;
+        min-width: 300px;
+    }
 }
 
 .header {

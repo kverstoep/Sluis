@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
 import { GebruikersComponent } from './components/gebruikers/gebruikers.component';
-import { FotosComponent } from './components/fotos/fotos.component';
 import { AccountComponent } from './components/account/account.component';
 import { Role } from '../gebruiker/gebruiker';
 import { AuthGuard } from '../../auth-guard';
+import { AlbumsComponent } from './components/albums/albums.component';
+import { AlbumDetailsComponent } from './components/albums/album-details/album-details.component';
 
 export const adminRoutes: Routes = [
     { path: '', redirectTo: 'account', pathMatch: 'full' },
@@ -18,8 +19,14 @@ export const adminRoutes: Routes = [
         data: { requiredRole: Role.ManageGebruikers }
     },
     {
-        path: 'fotos',
-        component: FotosComponent,
+        path: 'albums',
+        component: AlbumsComponent,
+        canActivate: [AuthGuard],
+        data: { requiredRole: Role.ManageFotos },
+    },
+    {
+        path: 'albums/:id',
+        component: AlbumDetailsComponent,
         canActivate: [AuthGuard],
         data: { requiredRole: Role.ManageFotos }
     }

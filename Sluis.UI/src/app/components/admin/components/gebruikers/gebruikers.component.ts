@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { materialImports } from '../../../../material.imports';
 import { MatTableModule } from '@angular/material/table';
-import { IGebruiker, Role } from '../../../gebruiker/gebruiker';
+import { IGebruiker } from '../../../gebruiker/gebruiker';
 import { GebruikerService } from '../../../gebruiker/gebruiker.service';
 import { MatDialog } from '@angular/material/dialog';
 import { UpsertGebruikerDialog } from './upsert/upsert.component';
 import { DeleteGebruikerDialog } from './delete/delete.component';
 import { GebruikerProvider } from '../../gebruiker-provider';
+import { HeaderToolbarComponent } from '../../../shared/toolbar/toolbar.component';
 
 @Component({
     selector: 'gebruikers-component',
-    imports: [...materialImports, MatTableModule],
+    imports: [...materialImports, MatTableModule, HeaderToolbarComponent],
     templateUrl: './gebruikers.component.html',
     styleUrl: './gebruikers.component.scss'
 })
@@ -27,7 +28,7 @@ export class GebruikersComponent implements OnInit {
         this.getGebruikers();
     }
 
-    openAddGebruikerDialog() {
+    openAddGebruikerDialog(): void {
         this.dialog.open(UpsertGebruikerDialog, {
             width: '400px',
             data: { actie: 'toevoegen' }
@@ -36,7 +37,7 @@ export class GebruikersComponent implements OnInit {
         });
     }
 
-    openEditGebruikerDialog(gebruiker: IGebruiker) {
+    openEditGebruikerDialog(gebruiker: IGebruiker): void {
         this.dialog.open(UpsertGebruikerDialog, {
             width: '400px',
             data: { gebruiker: gebruiker, actie: 'bewerken' }
@@ -46,7 +47,7 @@ export class GebruikersComponent implements OnInit {
         });
     }
 
-    openDeleteGebruikerDialog(gebruiker: IGebruiker) {
+    openDeleteGebruikerDialog(gebruiker: IGebruiker): void {
         this.dialog.open(DeleteGebruikerDialog, {
             data: { gebruiker: gebruiker }
         }).componentInstance.saved.subscribe(_ => {

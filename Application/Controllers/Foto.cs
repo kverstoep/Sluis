@@ -22,11 +22,6 @@ public sealed class FotoController(IInputHandler handler) : CleanController
     public async Task<ActionResult<GetFotoOutput>> Get(Guid id) =>
         Ok(await handler.HandleAsync(new GetFotoInput(id)));
 
-    [HttpPatch("{id:guid}")]
-    [Authorize(Roles = nameof(UserRole.ManageFotos))]
-    public async Task<ActionResult<UpdateFotoOutput>> Update(Guid id, UpdateFotoInput input) =>
-        Ok(await handler.HandleAsync(input.SetId(id)));
-
     [HttpDelete("{id:guid}")]
     [Authorize(Roles = nameof(UserRole.ManageFotos))]
     public async Task<IActionResult> Delete(Guid id) =>

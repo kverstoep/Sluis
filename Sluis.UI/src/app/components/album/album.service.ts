@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map, Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { map, Observable } from 'rxjs';
 import { IAlbum } from './album';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { HttpService } from '../shared/http-service';
@@ -16,8 +16,25 @@ export class AlbumService extends HttpService {
         super(httpClient, oAuthService);
     }
 
-    getAlbums(): Observable<IAlbum> {
+    get(id: string): Observable<IAlbum> {
+        return this.getByIdWithAuth<any>('album', id)
+            .pipe(map((result) => result.album));
+    }
+
+    getAlbums(): Observable<IAlbum[]> {
         return this.getWithAuth<any>('album')
             .pipe(map((result) => result.albums));
+    }
+
+    create(album: IAlbum): Observable<void> {
+        return this.postWithAuth<any>('album', album);
+    }
+
+    update(album: IAlbum): Observable<void> {
+        return this.patchWithAuth<any>('album', album.id, album);
+    }
+
+    delete(album: IAlbum): Observable<void> {
+        return this.deleteWithAuth<any>('album', album.id);
     }
 }

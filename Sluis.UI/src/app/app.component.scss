@@ -16,6 +16,18 @@
     .drawer-content {
         display: flex;
         flex-direction: column;
+
+        .toolbar {
+            height: 64px;
+
+            .home {
+                height: 100%;
+
+                .icon {
+                    height: 100%;
+                }
+            }
+        }
     }
 
     .drawer-header {

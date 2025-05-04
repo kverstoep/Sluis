@@ -18,7 +18,9 @@ export class AdminComponent {
         private gebruikerProvider: GebruikerProvider
     ) {
         this.gebruikerProvider.gebruiker.subscribe(gebruiker => {
-            this.gebruiker = gebruiker;
+            if (gebruiker) {
+                this.gebruiker = gebruiker;
+            }
         });
     }
 

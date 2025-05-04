@@ -23,9 +23,9 @@
     </mat-drawer>
 
     <mat-drawer-content class="drawer-content">
-        <mat-toolbar style="height: 64px;">
-            <a [routerLink]="['/']">
-                <img src="img/speeltuin_de_sluis.png" alt="Speeltuin de Sluis" width="200" height="auto">
+        <mat-toolbar class="toolbar">
+            <a [routerLink]="['/']" class="home">
+                <img src="img/speeltuin_de_sluis.png" class="icon" alt="Speeltuin de Sluis">
             </a>
 
             @for (route of routes; track $index) {

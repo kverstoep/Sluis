@@ -1,9 +1,8 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IGebruiker } from '../gebruiker/gebruiker';
 import { GebruikerService } from '../gebruiker/gebruiker.service';
-import { OAuthService } from 'angular-oauth2-oidc';
-import { authCodeFlowConfig } from './auth.config';
+import { AuthService } from './auth.service';
 
 @Injectable({
     providedIn: 'root'
@@ -13,46 +12,25 @@ export class GebruikerProvider {
     gebruiker = this.gebruikerSubject.asObservable();
 
     constructor(
-        private oauthService: OAuthService,
-        private gebruikerService: GebruikerService
+        private gebruikerService: GebruikerService,
+        private authService: AuthService
     ) {
-        this.configureOauth();
-
-        this.oauthService.events.subscribe((event) => {
-            if (event.type === 'token_received') {
-                this.fetchGebruiker();
-            }
+        this.authService.tokenReceived.subscribe(() => {
+            this.fetchGebruiker();
         });
-
-        this.loginOauth();
     }
 
     fetchGebruiker(): void {
-        if (!this.oauthService.hasValidIdToken()) {
-            this.loginOauth();
+        if (!this.authService.hasValidIdToken()) {
+            this.authService.loginOauth();
             return;
         }
 
         this.gebruikerService.getCurrentGebruiker().subscribe(gebruiker => {
-            var claims = this.oauthService.getIdentityClaims();
+            var claims = this.authService.getIdentityClaims();
             gebruiker.imageUrl = claims?.['picture'];
             this.gebruikerSubject.next(gebruiker);
         });
     }
 
-    private loginOauth() {
-        this.oauthService.loadDiscoveryDocumentAndTryLogin().then(() => {
-            this.oauthService.setupAutomaticSilentRefresh();
-
-            if (!this.oauthService.hasValidIdToken()) {
-                this.oauthService.initCodeFlow();
-            }
-        });
-    }
-
-    private configureOauth(): void {
-        this.oauthService.configure(authCodeFlowConfig);
-        this.oauthService.setStorage(sessionStorage);
-        this.oauthService.loadDiscoveryDocumentAndTryLogin();
-    }
 }
