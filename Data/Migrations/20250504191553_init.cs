@@ -48,7 +48,7 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
-                    image = table.Column<byte[]>(type: "bytea", nullable: true),
+                    file = table.Column<byte[]>(type: "bytea", nullable: true),
                     album_id = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>

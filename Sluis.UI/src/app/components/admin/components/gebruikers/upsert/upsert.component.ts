@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Inject, Output } from "@angular/core";
-import { materialImports } from "../../../../../material.imports";
+import { materialGenericImports } from "../../../../../material.imports";
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -12,7 +12,7 @@ import { IGebruiker, Role } from "../../../../gebruiker/gebruiker";
     selector: 'upsert-gebruiker-dialog',
     templateUrl: 'upsert.component.html',
     styleUrl: './upsert.component.scss',
-    imports: [...materialImports, MatDialogModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatCheckboxModule]
+    imports: [...materialGenericImports, MatDialogModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatCheckboxModule]
 })
 export class UpsertGebruikerDialog {
     @Output() saved = new EventEmitter<void>();

@@ -1,10 +1,7 @@
 import { Component, EventEmitter, Inject, Output } from "@angular/core";
-import { materialImports } from "../../../../../material.imports";
+import { materialFormImports, materialGenericImports } from "../../../../../material.imports";
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { FormBuilder, ReactiveFormsModule, Validators } from "@angular/forms";
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from "@angular/material/input";
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormBuilder, Validators } from "@angular/forms";
 import { IAlbum } from "../../../../album/album";
 import { AlbumService } from "../../../../album/album.service";
 
@@ -12,7 +9,7 @@ import { AlbumService } from "../../../../album/album.service";
     selector: 'upsert-album-dialog',
     templateUrl: 'upsert.component.html',
     styleUrl: './upsert.component.scss',
-    imports: [...materialImports, MatDialogModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatCheckboxModule]
+    imports: [...materialGenericImports, ...materialFormImports, MatDialogModule]
 })
 export class UpsertAlbumDialog {
     @Output() saved = new EventEmitter<void>();

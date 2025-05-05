@@ -19,6 +19,8 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "@ngx-dropzone/cdk": "^19.2.1",
+    "@ngx-dropzone/material": "^19.2.1",
     "angular-oauth2-oidc": "^19.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { materialImports } from '../../material.imports';
+import { materialGenericImports } from '../../material.imports';
 import { IGebruiker, Role } from '../gebruiker/gebruiker';
 import { MatTabsModule } from '@angular/material/tabs';
 import { GebruikerProvider } from './gebruiker-provider';
 
 @Component({
     selector: 'admin-component',
-    imports: [...materialImports, MatTabsModule],
+    imports: [...materialGenericImports, MatTabsModule],
     templateUrl: './admin.component.html',
     styleUrl: './admin.component.scss'
 })

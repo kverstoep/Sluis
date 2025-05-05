@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { materialImports } from '../../../../material.imports';
+import { materialGenericImports } from '../../../../material.imports';
 import { HeaderToolbarComponent } from '../../../shared/toolbar/toolbar.component';
 import { AlbumService } from '../../../album/album.service';
 import { IAlbum } from '../../../album/album';
@@ -8,7 +8,7 @@ import { UpsertAlbumDialog } from './upsert/upsert.component';
 
 @Component({
     selector: 'albums-component',
-    imports: [...materialImports, HeaderToolbarComponent],
+    imports: [...materialGenericImports, HeaderToolbarComponent],
     templateUrl: './albums.component.html',
     styleUrl: './albums.component.scss'
 })

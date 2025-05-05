@@ -13,7 +13,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Data.Migrations
 {
     [DbContext(typeof(SluisDbContext))]
-    [Migration("20250504101933_init")]
+    [Migration("20250504191553_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -59,9 +59,9 @@ namespace Data.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("album_id");
 
-                    b.Property<byte[]>("Image")
+                    b.Property<byte[]>("File")
                         .HasColumnType("bytea")
-                        .HasColumnName("image");
+                        .HasColumnName("file");
 
                     b.HasKey("Id")
                         .HasName("pk_foto");

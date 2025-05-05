@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { materialImports } from '../../material.imports';
+import { materialGenericImports } from '../../material.imports';
 
 @Component({
     selector: 'home-component',
-    imports: [...materialImports],
+    imports: [...materialGenericImports],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
-import { IAlbum } from './album';
+import { IAlbum, IAlbumWithFotos } from './album';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { HttpService } from '../shared/http-service';
 
@@ -16,7 +16,7 @@ export class AlbumService extends HttpService {
         super(httpClient, oAuthService);
     }
 
-    get(id: string): Observable<IAlbum> {
+    get(id: string): Observable<IAlbumWithFotos> {
         return this.getByIdWithAuth<any>('album', id)
             .pipe(map((result) => result.album));
     }

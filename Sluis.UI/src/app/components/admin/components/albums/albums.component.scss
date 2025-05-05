@@ -4,8 +4,30 @@
     overflow: auto;
 
     .album-card {
+        display: flex;
+        flex-direction: row;
         margin: 16px;
-        width: 600px;
+        width: 500px;
         min-width: 300px;
+        height: 100px;
+        justify-content: space-between;
+
+        .preview {
+            border-bottom-right-radius: inherit;
+            border-top-right-radius: inherit;
+        }
+
+        .description {
+            padding-left: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .album-card:hover {
+        // transform: scale(1.01);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
     }
 }

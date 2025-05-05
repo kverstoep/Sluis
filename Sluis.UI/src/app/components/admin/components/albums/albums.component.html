@@ -4,10 +4,14 @@
 
 <div class="album-card-container">
     @for (album of albums; track $index) {
-    <mat-card class="album-card" appearance="outlined" [routerLink]="`/admin/albums/${album.id}`">
-        <mat-card-header>
+    <mat-card class="album-card" appearance="raised" [routerLink]="`/admin/albums/${album.id}`">
+        <div class="description">
             <mat-card-title>{{album?.name}}</mat-card-title>
-        </mat-card-header>
+            <mat-card-subtitle>{{album?.fotoCount}} foto's</mat-card-subtitle>
+        </div>
+
+        <img [src]="album?.preview?.file ? 'data:image/jpeg;base64,' + album.preview.file : 'img/no_image.jpg'"
+            alt="Image" class="preview">
     </mat-card>
     }
 </div>

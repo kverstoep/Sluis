@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { materialImports } from './material.imports';
+import { materialGenericImports } from './material.imports';
 import { MatMenuModule } from '@angular/material/menu';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
@@ -12,7 +12,7 @@ import { MatExpansionPanel } from '@angular/material/expansion';
 @Component({
     selector: 'app-root',
     imports: [
-        ...materialImports,
+        ...materialGenericImports,
         MatMenuModule,
         MatSidenavModule,
         MatListModule,

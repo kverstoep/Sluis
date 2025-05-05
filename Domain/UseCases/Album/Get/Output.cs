@@ -4,10 +4,10 @@ namespace Domain;
 
 public sealed class GetAlbumOutput : IOutput
 {
-    public AlbumModel Album { get; }
+    public AlbumByIdModel Album { get; }
 
     internal GetAlbumOutput(Album album)
     {
-        Album = AlbumModel.Create(album);
+        Album = AlbumByIdModel.Create(album);
     }
 }

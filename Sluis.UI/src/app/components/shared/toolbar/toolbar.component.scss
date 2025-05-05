@@ -1,9 +1,16 @@
 .header {
+    height: 64px;
     background-color: var(--mat-sidenav-content-background-color);
     padding-bottom: 4px;
     padding-top: 8px;
 
     .title {
         margin-right: 12px;
+    }
+
+    .action-button-container {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
     }
 }

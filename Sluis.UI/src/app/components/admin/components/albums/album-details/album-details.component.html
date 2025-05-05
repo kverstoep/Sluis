@@ -1,2 +1,46 @@
-<header-toolbar title="Foto's">
+<header-toolbar title="{{album?.name}}">
+    <button mat-icon-button class="back-button" (click)="back()" aria-label="terug">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <!-- <button mat-button class="back-button" style="margin-right:12px" (click)="back()">Terug</button> -->
+    <button mat-icon-button class="action-button" (click)="openEditAlbumDialog()" aria-label="wijzig">
+        <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button class="action-button" (click)="openAlbumDeleteConfirmDialog()" aria-label="verwijder">
+        <mat-icon>delete</mat-icon>
+    </button>
+
 </header-toolbar>
+
+<div class="fotos-container">
+    @for (foto of album?.fotos; track foto?.id) {
+    <div class="foto-container">
+        <button mat-fab class="delete-foto-button" (click)="openFotoDeleteConfirmDialog(foto)">
+            <mat-icon>delete</mat-icon>
+        </button>
+        <img [src]="`data:image/jpeg;base64, ${foto?.file}`" class="foto" alt="Image">
+    </div>
+    }
+</div>
+
+<mat-card appearance="outlined" class="upload-container">
+    <mat-card-content class="upload-card-content">
+        <mat-form-field class="drop-form" appearance="outline">
+            <mat-label>Sleep of klik om te uploaden</mat-label>
+            <ngx-mat-dropzone>
+                <input type="file" fileInput multiple [formControl]="filesControl" />
+                @for (file of files; track file.name) {
+                <mat-chip-row (removed)="removeUpload(file)">
+                    {{ file.name }}
+                    <button matChipRemove>
+                        <mat-icon>cancel</mat-icon>
+                    </button>
+                </mat-chip-row>
+                }
+            </ngx-mat-dropzone>
+            <mat-icon matSuffix>cloud_upload</mat-icon>
+        </mat-form-field>
+
+        <button class="save-button" (click)="save()" mat-flat-button>Toevoegen aan album</button>
+    </mat-card-content>
+</mat-card>

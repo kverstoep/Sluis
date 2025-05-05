@@ -56,9 +56,9 @@ namespace Data.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("album_id");
 
-                    b.Property<byte[]>("Image")
+                    b.Property<byte[]>("File")
                         .HasColumnType("bytea")
-                        .HasColumnName("image");
+                        .HasColumnName("file");
 
                     b.HasKey("Id")
                         .HasName("pk_foto");

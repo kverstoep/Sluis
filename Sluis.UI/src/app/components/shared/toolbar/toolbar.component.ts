@@ -1,9 +1,9 @@
 import { Component, Input } from "@angular/core";
-import { materialImports } from "../../../material.imports";
+import { materialGenericImports } from "../../../material.imports";
 
 @Component({
     selector: 'header-toolbar',
-    imports: [...materialImports],
+    imports: [...materialGenericImports],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss'
 })

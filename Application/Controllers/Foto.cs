@@ -1,4 +1,5 @@
-﻿using Clean.Core;
+﻿
+using Clean.Core;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,9 +15,9 @@ public sealed class FotoController(IInputHandler handler) : CleanController
     public async Task<ActionResult<CreateFotoOutput>> Create(CreateFotoInput input) =>
         CreatedAtAction(nameof(Get), await handler.HandleAsync(input), ("id", x => x.Id));
 
-    [HttpGet]
-    public async Task<ActionResult<GetAllFotosOutput>> GetAll() =>
-        Ok(await handler.HandleAsync(new GetAllFotosInput()));
+    //[HttpGet]
+    //public async Task<ActionResult<GetAllFotosOutput>> GetAll() =>
+    //    Ok(await handler.HandleAsync(new GetAllFotosInput()));
 
     [HttpGet("{id:guid}")]
     public async Task<ActionResult<GetFotoOutput>> Get(Guid id) =>

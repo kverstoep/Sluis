@@ -1,4 +1,9 @@
 <mat-toolbar class="header">
+    <ng-content select=".back-button"></ng-content>
     <span class="title">{{title}}</span>
-    <ng-content select="button"></ng-content>
+    <ng-content select=".add-button"></ng-content>
+
+    <div class="action-button-container">
+        <ng-content select=".action-button"></ng-content>
+    </div>
 </mat-toolbar>

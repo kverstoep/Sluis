@@ -4,7 +4,7 @@ namespace Domain;
 
 internal class Foto : Entity
 {
-    public byte[] Image { get; private set; }
+    public byte[] File { get; private set; }
     public Guid AlbumId { get; set; }
 
     public virtual Album Album { get; set; }
@@ -14,7 +14,7 @@ internal class Foto : Entity
     public Foto(CreateFotoInput input)
     {
         AlbumId = input.AlbumId;
-        Image = input.Image;
+        File = input.File;
 
         events.Add(new FotoCreatedEvent(this));
     }
