@@ -63,8 +63,8 @@ export class NavigationPaths {
             ]
         },
         {
-            name: 'Albums',
-            routeLink: 'albums'
+            name: 'Foto\'s',
+            routeLink: 'fotos'
         },
         {
             name: 'Contact',

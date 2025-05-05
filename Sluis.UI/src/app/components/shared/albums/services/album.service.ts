@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
-import { IAlbum, IAlbumWithFotos } from './album';
+import { IAlbum, IAlbumWithFotos } from '../models/album';
 import { OAuthService } from 'angular-oauth2-oidc';
-import { HttpService } from '../shared/http-service';
+import { HttpService } from '../../http-service';
 
 @Injectable({
     providedIn: 'root'

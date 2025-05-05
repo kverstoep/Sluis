@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { materialGenericImports } from '../../../../material.imports';
 import { GebruikerProvider } from '../../gebruiker-provider';
-import { IGebruiker } from '../../../gebruiker/gebruiker';
+import { IGebruiker } from '../shared/gebruiker/gebruiker';
 import { HeaderToolbarComponent } from '../../../shared/toolbar/toolbar.component';
 
 @Component({

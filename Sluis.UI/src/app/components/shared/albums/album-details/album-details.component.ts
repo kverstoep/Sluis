@@ -1,19 +1,20 @@
-import { Component } from '@angular/core';
-import { materialFormImports, materialGenericImports } from '../../../../../material.imports';
-import { HeaderToolbarComponent } from '../../../../shared/toolbar/toolbar.component';
-import { ActivatedRoute } from '@angular/router';
-import { AlbumService } from '../../../../album/album.service';
-import { FileInputDirective } from '@ngx-dropzone/cdk';
-import { MatDropzone } from '@ngx-dropzone/material';
-import { MatChipsModule } from '@angular/material/chips';
-import { FormControl } from '@angular/forms';
-import { FotoService } from '../../../../album/foto.service';
-import { IAlbumWithFotos } from '../../../../album/album';
-import { IFoto } from '../../../../album/foto';
-import { MatDialog } from '@angular/material/dialog';
-import { DeleteConfirmDialog } from '../../../../shared/delete-confirm/delete-confirm.component';
+import { Component } from "@angular/core";
+import { FormControl, Validators } from "@angular/forms";
+import { MatChipsModule } from "@angular/material/chips";
+import { MatDialog } from "@angular/material/dialog";
+import { ActivatedRoute } from "@angular/router";
+import { FileInputDirective } from "@ngx-dropzone/cdk";
+import { MatDropzone } from "@ngx-dropzone/material";
+import { materialGenericImports, materialFormImports } from "../../../../material.imports";
+import { UpsertAlbumDialog } from "../../../admin/components/albums/upsert/upsert.component";
+import { DeleteConfirmDialog } from "../../delete-confirm/delete-confirm.component";
+import { HeaderToolbarComponent } from "../../toolbar/toolbar.component";
+import { IAlbumWithFotos } from "../models/album";
+import { IFoto } from "../models/foto";
+import { AlbumService } from "../services/album.service";
+import { FotoService } from "../services/foto.service";
 import { Location } from '@angular/common';
-import { UpsertAlbumDialog } from '../upsert/upsert.component';
+
 
 @Component({
     selector: 'albums-component',
@@ -22,9 +23,10 @@ import { UpsertAlbumDialog } from '../upsert/upsert.component';
     styleUrl: './album-details.component.scss'
 })
 export class AlbumDetailsComponent {
-    filesControl = new FormControl<File[]>([]);
+    filesControl = new FormControl<File[]>([], [Validators.required]);
 
     album: IAlbumWithFotos;
+    adminMode = false;
 
     get files(): File[] {
         const files = this.filesControl.value;
@@ -40,9 +42,10 @@ export class AlbumDetailsComponent {
         private albumService: AlbumService,
         private fotoService: FotoService,
         private dialog: MatDialog,
-        private location: Location
+        private location: Location,
     ) {
         const albumId = this.route.snapshot.paramMap.get('id');
+        this.adminMode = this.route.snapshot.data['adminMode'];
         this.getAlbum(albumId);
     }
 
@@ -63,7 +66,7 @@ export class AlbumDetailsComponent {
 
     openFotoDeleteConfirmDialog(foto: IFoto): void {
         const dialogRef = this.dialog.open(DeleteConfirmDialog, {
-            data: { deleteText: `Wilt u de foto verwijderen?`, dialogTitle: 'Foto verwijderen' }
+            data: { deleteText: `Foto verwijderen?`, dialogTitle: 'Foto verwijderen' }
         });
 
         dialogRef.componentInstance.bevestigd.subscribe(() => {
@@ -76,7 +79,7 @@ export class AlbumDetailsComponent {
 
     openAlbumDeleteConfirmDialog(): void {
         const dialogRef = this.dialog.open(DeleteConfirmDialog, {
-            data: { deleteText: `Wilt u dit album en foto's verwijderen?`, dialogTitle: 'Album en foto\'s verwijderen?' }
+            data: { deleteText: `Album en foto's verwijderen?`, dialogTitle: 'Album en foto\'s verwijderen?' }
         });
 
         dialogRef.componentInstance.bevestigd.subscribe(() => {

@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { forkJoin, from, map, Observable, switchMap } from 'rxjs';
 import { OAuthService } from 'angular-oauth2-oidc';
-import { HttpService } from '../shared/http-service';
-import { IFoto } from './foto';
-import { fileToBase64 } from './file-converter';
+import { HttpService } from '../../http-service';
+import { IFoto } from '../models/foto';
+import { fileToBase64 } from '../helper/file-converter';
 
 @Injectable({
     providedIn: 'root'

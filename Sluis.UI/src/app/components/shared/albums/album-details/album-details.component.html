@@ -2,11 +2,13 @@
     <button mat-icon-button class="back-button" (click)="back()" aria-label="terug">
         <mat-icon>arrow_back</mat-icon>
     </button>
-    <!-- <button mat-button class="back-button" style="margin-right:12px" (click)="back()">Terug</button> -->
-    <button mat-icon-button class="action-button" (click)="openEditAlbumDialog()" aria-label="wijzig">
+
+    <button mat-icon-button class="action-button" (click)="openEditAlbumDialog()" *ngIf="adminMode" aria-label="wijzig">
         <mat-icon>edit</mat-icon>
     </button>
-    <button mat-icon-button class="action-button" (click)="openAlbumDeleteConfirmDialog()" aria-label="verwijder">
+
+    <button mat-icon-button class="action-button" (click)="openAlbumDeleteConfirmDialog()" *ngIf="adminMode"
+        aria-label="verwijder">
         <mat-icon>delete</mat-icon>
     </button>
 
@@ -15,7 +17,7 @@
 <div class="fotos-container">
     @for (foto of album?.fotos; track foto?.id) {
     <div class="foto-container">
-        <button mat-fab class="delete-foto-button" (click)="openFotoDeleteConfirmDialog(foto)">
+        <button mat-fab class="delete-foto-button" (click)="openFotoDeleteConfirmDialog(foto)" *ngIf="adminMode">
             <mat-icon>delete</mat-icon>
         </button>
         <img [src]="`data:image/jpeg;base64, ${foto?.file}`" class="foto" alt="Image">
@@ -23,7 +25,7 @@
     }
 </div>
 
-<mat-card appearance="outlined" class="upload-container">
+<mat-card appearance="outlined" class="upload-container" *ngIf="adminMode">
     <mat-card-content class="upload-card-content">
         <mat-form-field class="drop-form" appearance="outline">
             <mat-label>Sleep of klik om te uploaden</mat-label>
@@ -41,6 +43,7 @@
             <mat-icon matSuffix>cloud_upload</mat-icon>
         </mat-form-field>
 
-        <button class="save-button" (click)="save()" mat-flat-button>Toevoegen aan album</button>
+        <button mat-flat-button class="save-button" (click)="save()" [disabled]="filesControl.invalid">Toevoegen aan
+            album</button>
     </mat-card-content>
 </mat-card>

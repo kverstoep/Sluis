@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { materialGenericImports } from '../../../../material.imports';
-import { HeaderToolbarComponent } from '../../../shared/toolbar/toolbar.component';
-import { AlbumService } from '../../../album/album.service';
-import { IAlbum } from '../../../album/album';
-import { MatDialog } from '@angular/material/dialog';
-import { UpsertAlbumDialog } from './upsert/upsert.component';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { materialGenericImports } from '../../../material.imports';
+import { UpsertAlbumDialog } from '../../admin/components/albums/upsert/upsert.component';
+import { HeaderToolbarComponent } from '../toolbar/toolbar.component';
+import { IAlbum } from './models/album';
+import { AlbumService } from './services/album.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'albums-component',
@@ -14,13 +15,16 @@ import { UpsertAlbumDialog } from './upsert/upsert.component';
 })
 export class AlbumsComponent implements OnInit {
     albums: IAlbum[];
+    adminMode = false;
 
     constructor(
         private service: AlbumService,
         private dialog: MatDialog,
+        private route: ActivatedRoute
     ) { }
 
     ngOnInit(): void {
+        this.adminMode = this.route.snapshot.data['adminMode'];
         this.getAlbums();
     }
 
@@ -35,5 +39,9 @@ export class AlbumsComponent implements OnInit {
         }).componentInstance.saved.subscribe(_ => {
             this.getAlbums();
         });
+    }
+
+    getDetailRouterLink(album: IAlbum): string {
+        return this.adminMode ? `/admin/albums/${album.id}` : `/fotos/${album.id}`
     }
 }

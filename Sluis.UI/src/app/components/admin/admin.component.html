@@ -6,7 +6,7 @@
 
     <a mat-tab-link [routerLink]="'/admin/albums'" routerLinkActive #albums="routerLinkActive"
         [active]="albums.isActive" [disabled]="!hasRole(Roles.ManageFotos)">
-        Foto's
+        Albums
     </a>
 
     <a mat-tab-link [routerLink]="'/admin/gebruikers'" routerLinkActive #gebruikers="routerLinkActive"

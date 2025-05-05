@@ -15,7 +15,6 @@ public sealed class AlbumController(IInputHandler handler) : CleanController
         CreatedAtAction(nameof(Get), await handler.HandleAsync(input), ("id", x => x.Id));
 
     [HttpGet]
-    [Authorize(Roles = nameof(UserRole.ManageFotos))]
     public async Task<ActionResult<GetAllAlbumsOutput>> GetAll() =>
         Ok(await handler.HandleAsync(new GetAllAlbumsInput()));
 

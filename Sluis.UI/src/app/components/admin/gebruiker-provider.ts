@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { IGebruiker } from '../gebruiker/gebruiker';
-import { GebruikerService } from '../gebruiker/gebruiker.service';
+import { IGebruiker } from './components/shared/gebruiker/gebruiker';
+import { GebruikerService } from './components/shared/gebruiker/gebruiker.service';
 import { AuthService } from './auth.service';
 
 @Injectable({

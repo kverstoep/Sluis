@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { materialGenericImports } from '../../material.imports';
-import { IGebruiker, Role } from '../gebruiker/gebruiker';
+import { IGebruiker, Role } from './components/shared/gebruiker/gebruiker';
 import { MatTabsModule } from '@angular/material/tabs';
 import { GebruikerProvider } from './gebruiker-provider';
 

@@ -5,8 +5,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angula
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from "@angular/material/input";
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { GebruikerService } from "../../../../gebruiker/gebruiker.service";
-import { IGebruiker, Role } from "../../../../gebruiker/gebruiker";
+import { GebruikerService } from "../../shared/gebruiker/gebruiker.service";
+import { IGebruiker, Role } from "../../shared/gebruiker/gebruiker";
 
 @Component({
     selector: 'upsert-gebruiker-dialog',

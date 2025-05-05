@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { materialGenericImports } from '../../material.imports';
 
 @Component({
-    selector: 'news-component',
+    selector: 'fotos-component',
     imports: [...materialGenericImports],
-    templateUrl: './news.component.html',
-    styleUrl: './news.component.scss'
+    templateUrl: './fotos.component.html',
+    styleUrl: './fotos.component.scss'
 })
-export class NewsComponent {
+export class FotosComponent {
 
 }

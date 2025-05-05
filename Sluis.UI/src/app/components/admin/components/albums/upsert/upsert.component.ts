@@ -2,8 +2,8 @@ import { Component, EventEmitter, Inject, Output } from "@angular/core";
 import { materialFormImports, materialGenericImports } from "../../../../../material.imports";
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, Validators } from "@angular/forms";
-import { IAlbum } from "../../../../album/album";
-import { AlbumService } from "../../../../album/album.service";
+import { IAlbum } from "../../../../shared/albums/models/album";
+import { AlbumService } from "../../../../shared/albums/services/album.service";
 
 @Component({
     selector: 'upsert-album-dialog',

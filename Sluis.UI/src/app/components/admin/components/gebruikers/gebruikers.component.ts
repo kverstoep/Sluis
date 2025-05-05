@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { materialGenericImports } from '../../../../material.imports';
 import { MatTableModule } from '@angular/material/table';
-import { IGebruiker } from '../../../gebruiker/gebruiker';
-import { GebruikerService } from '../../../gebruiker/gebruiker.service';
+import { IGebruiker } from '../shared/gebruiker/gebruiker';
+import { GebruikerService } from '../shared/gebruiker/gebruiker.service';
 import { MatDialog } from '@angular/material/dialog';
 import { UpsertGebruikerDialog } from './upsert/upsert.component';
 import { DeleteConfirmDialog } from '../../../shared/delete-confirm/delete-confirm.component';
@@ -49,7 +49,7 @@ export class GebruikersComponent implements OnInit {
 
     openDeleteConfirmDialog(gebruiker: IGebruiker): void {
         const dialogRef = this.dialog.open(DeleteConfirmDialog, {
-            data: { deleteText: `Wilt u ${gebruiker.email} verwijderen?`, dialogTitle: 'Persoon verwijderen' }
+            data: { deleteText: `${gebruiker.email} verwijderen?`, dialogTitle: 'Persoon verwijderen' }
         });
 
         dialogRef.componentInstance.bevestigd.subscribe(() => {
